@@ -1,0 +1,351 @@
+@font-face {font-family: "FinalFrontier";
+            src: local("FinalFrontier"), url(./FinalFrontier.ttf) format('truetype');}
+@font-face {font-family: "FinalFrontierSS";
+            src: local("FinalFrontierSS"), url(FinalFrontierSS.ttf) format('truetype');}
+
+* {font-size: 16px; box-sizing: border-box; margin: 0;}
+
+html {
+  background-image: url(images/bg1.jpeg);
+  background-size: 100vw;
+  background-position: center 6vw;
+  background-color: #124559;
+  background-repeat: repeat-y;
+}
+
+body {margin: 0;}
+
+h1 {font-family: "FinalFrontier";   font-size: 4rem; font-weight: 100;}
+h2 {font-family: "FinalFrontierSS"; font-size: 2rem; font-weight: 100;}
+h3 {font-family: "FinalFrontier";   font-size: 1.5rem; color: #A71313;}
+h4 {font-family: "FinalFrontier";   font-size: 3.5rem; color: #121212; width: 80%;}
+h5 {font-family: "Roboto";          font-size: 1.5rem; color: #F5F5F5; padding: 24px; width: 80%;}
+h6 {font-family: "Roboto";          font-size: 1.5rem; color: #F5F5F5; padding: 24px 0;}
+
+.header > h2#long-logo1 {font-size: 1rem; display: block;}
+.header > h3#long-logo2 {font-size: 3rem; font-weight: 100; display: block;}
+.short-logo {height: 56px; display: none;}
+.long-form {display: block;}
+
+.long-form a {
+  font-size: 1.5rem;
+  font-family: "FinalFrontier";
+  color: #121212;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container > .header {
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #F5F5F5;
+  border-bottom: 0.5px solid #121212;
+}
+
+.container > .footer {
+  grid-area: footer;
+  background-color: #F5F5F5;
+  border-top: 1px solid #121212;
+}
+.container > .main {
+  grid-area: main;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: 
+    "intro"
+    "divider1"
+    "section1"
+    "divider2"
+    "section2"
+    "divider3"
+    "section3"
+    "divider4"
+    "section4";
+}
+
+.container > .main::-webkit-scrollbar {
+  display: none;
+}
+
+#grid {
+  grid-area: intro;
+  background-image: url(images/bg1.jpeg);
+  background-size: cover;
+  background-position: left;
+  grid-area: intro;
+  display: grid;
+  grid-gap: 1vw; 
+  grid-template-rows: 5vw;
+  grid-auto-rows: 9vw;
+  grid-template-columns: 1fr repeat(6, 3fr) 1fr;
+}
+
+#grid > div {
+  position: relative;
+  background-color:#fac200AA;
+  outline-color:#fac200;
+  outline-style: solid;
+  outline-width: 1vw;  /* Same as grid gap */
+}
+
+#grid > div.tags {
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #121212;
+  height: 100%;
+}
+
+#grid > div.tags > p {
+  font-size: 2.25vw;
+}
+
+#row2-1{
+  text-align: right;
+}
+#row2-1 > p {
+  font-family: 'Rozha One', serif;
+  position: relative;
+  font-size: 5vw;
+  margin: 0;
+}
+
+#row2-1 > p:nth-child(1){margin-top: 5vw;}
+#row2-1 > p:nth-child(2){margin-top: -1vw; font-size: 7.5vw;}
+
+#grid > div.mask {background-color:#40434e40;}
+#grid > div.fill {background-color:#fac200;}
+
+#grid > div.colspan2 {grid-column-end: span 2;}
+#grid > div.colspan3 {grid-column-end: span 3;}
+
+#grid > div.rowspan2 {grid-row-end: span 2;}
+
+#section1 {grid-area: section1; background-color: #A71313;
+           display: flex; flex-flow: row wrap; padding: 24px;
+           align-items: center; justify-content: center;}
+#section1 > div {width: 20vw; min-width: 120px; height: 20vw; max-height: 120px;
+                 margin: 8px; display: flex; align-items: center;
+                 justify-content: center;}
+
+#section2 {grid-area: section2; background-color: #dea327;
+           display: flex; flex-flow: row wrap; padding: 24px;
+           align-items: center; justify-content: space-around;}
+#section2 > div {width: 40vw; min-width: 325px;
+                 display: flex; align-items: center;
+                 justify-content: center;}
+figure > img {width: 40vw; min-width: 325px; margin: 8px; border-radius: 8px;}
+
+.links {display: flex; flex-direction: row; height: 20vh;
+        justify-content: space-around; align-items: center;}
+
+#section3 {grid-area: section3; background-color: #2052ad; height: 70vh;}
+#section4 {grid-area: section4; background-color: green;}
+
+.flex-align-sec {height: 70vh; display: flex; align-items: center; justify-content: center;}
+    
+#divider1 {grid-area: divider1; background-color: #F5F5F5; margin-top: 1vw}
+#divider2 {grid-area: divider2; background-color: #F5F5F5;}
+#divider3 {grid-area: divider3; background-color: #F5F5F5;}
+#divider4 {grid-area: divider4; background-color: #F5F5F5;}
+
+.flex-align-div {height: 20vh; display: flex; align-items: center; justify-content: center;
+                 border-top: 1px solid black; border-bottom: 1px solid black;}
+  
+.container > .main > .section {
+  grid-area: 1 / 2 / 1 / 3;
+}
+
+.container > .main > .section-full {
+  grid-area: 1 / 1 / 1 / -1
+}
+
+.zoom {
+  padding: 0;
+  transition: transform 0.12s; /* Animation */
+  width: auto;
+  margin: 0 auto;
+  border-radius: 15px;
+  color: #F5F5F5;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+  z-index: 10;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: #2052ad;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* -------------------------------- Drop Menu in Mobile Mode -------------------------------- */
+
+.dropbtn {
+  border: none;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+/* -------------------------------- Return To Top Button -------------------------------- */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* -------------------------------------- Lightbox -------------------------------------- */
+
+.row > .column {padding: 0 8px;}
+
+.row:after {content: ""; display: table; clear: both;}
+
+.column {float: left; width: 25%;}
+
+/* The Modal (background) */
+.modal { display: none; position: fixed; z-index: 1;
+  padding-top: 25px; left: 0; top: 0; width: 100%; height: 100%;
+  overflow: auto; background-color: #121212EE;
+}
+
+/* Modal Content */
+.modal-content {position: relative;
+  background-color: #F5F5F5;
+  margin: auto; padding: 0; width: 90%; max-width: 1200px;}
+
+/* The Close Button */
+.close { color: #F5F5F5;
+  position: absolute; top: 10px; right: 25px;
+  font-size: 35px; font-weight: bold; z-index: 100;}
+
+.close:hover, .close:focus {color: #999; text-decoration: none; cursor: pointer;}
+
+.mySlides {text-align: center; display: none; background-color: #121212;}
+
+.cursor {cursor: pointer;}
+
+/* Next & previous buttons */
+.prev, .next { cursor: pointer; position: absolute;
+  top: 50%; width: auto; padding: 16px; margin-top: -50px;
+  color: #F5F5F5; font-weight: bold; font-size: 20px;
+  transition: 0.6s ease; border-radius: 0 3px 3px 0;
+  user-select: none; -webkit-user-select: none;}
+
+/* Position the "next button" to the right */
+.next { right: 0; border-radius: 3px 0 0 3px;}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {background-color: #121212cc;}
+
+/* Number text (1/3 etc) */
+.numbertext { color: #f5f5f5; font-size: 12px;
+  padding: 8px 12px; position: absolute; top: 0;}
+
+img { margin-bottom: -4px;}
+
+.caption-container { text-align: center;
+  font-size: 2rem; background-color: #121212;
+  padding: 2px 16px; color: #F5F5F5;}
+
+.demo {opacity: 0.6;}
+
+.active, .demo:hover {opacity: 1;}
+
+img.hover-shadow {transition: 0.3s;}
+
+.hover-shadow:hover {box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;}
+
+/* On screens that are between 425px and 700px */
+@media screen and (min-width: 426px) and (max-width: 700px) {
+  h4 {font-size: 2.5rem;}
+  h2 {font-size: 1.5rem;}
+  h3 {font-size: 1rem;}
+}
+
+/* On screens that are 425px or less */
+@media screen and (min-width: 426px) and (max-width: 550px) {
+  .dropdown {display: inline-block;}
+  .long-form {display: none;}
+
+}
+
+/* On screens that are 425px or less */
+@media screen and (min-width: 0) and (max-width: 425px) {
+  h1 {font-size: 3rem;}
+  h4 {font-size: 2rem;}
+  h5 {font-size: 1.25rem; text-align: justify; text-justify: inter-word; width: 96%; padding: 8px;}
+  #long-logo1 { display: none; }
+  #long-logo2 { display: none; }
+  #short-logo { display: block; }
+
+  .dropdown {display: inline-block;}
+  .long-form {display: none;}
+        
+}
