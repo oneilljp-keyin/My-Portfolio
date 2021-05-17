@@ -1,8 +1,8 @@
-h1, h2, h4, h5, small, .ham-menu, .card__face, .long-form a, .dropdown-content a,
+h1, h2, h4, h5, h6, small, .ham-menu, .card__face, .long-form a, .dropdown-content a,
 .container > .footer > p, .card__face--back
  { color: #F5F5F5; }
 
-h6, .code-logo, .code-text, .zoom
+.code-logo, .code-text, .zoom
  { color: #121212; }
 
 .container > .header, .dropdown-content, .dropdown-content a:hover, .container > .footer,

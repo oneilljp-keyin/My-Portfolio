@@ -210,14 +210,24 @@
           src="./images/mynftours.jpg" alt="My Newfoundland Tours" />
         </figure>
         <figure>
-          <figcaption><b>Johnny O&#39;s Wrestling Website (2003-Pres)</b></figcaption>
+          <figcaption><a href="http://wrestling.johnny-o.net" target=”_blank”><b>Johnny O&#39;s Wrestling Website (2003-Pres)</b></a></figcaption>
           <img class="hover-shadow cursor" onclick="openModal();currentSlide(3)"
           src="./images/joww.jpg" alt="Johnny O&#39;s Wrestling Website" />
         </figure>
         <figure>
           <figcaption><b>Topsail Billiards Inventory Tracker (2005-Pres)</b></figcaption>
           <img class="hover-shadow cursor" onclick="openModal();currentSlide(4)"
-          src="./images/tbi_inventory.jpg" alt="Topsail Billiards Inventory Tracker" />
+          src="./images/tbi_inventory.png" alt="Topsail Billiards Inventory Tracker" />
+        </figure>
+        <figure>
+          <figcaption><a href="http://johnny-o.net/calc" target=”_blank”><b>JavaScript Calculator (Inspired by Star Trek: TNG)</b></a></figcaption>
+          <img class="hover-shadow cursor" onclick="openModal();currentSlide(5)"
+          src="./images/STCalculator_wide.png" alt="JavaScript Calculator (Inspired by Star Trek: TNG)" />
+        </figure>
+        <figure>
+          <figcaption><a href="http://johnny-o.net/card-sharks" target=”_blank”><b>Card Sharks App (Using React JS)</b></a></figcaption>
+          <img class="hover-shadow cursor" onclick="openModal();currentSlide(6)"
+          src="./images/CardSharks.png" alt="Card Sharks App (Using React JS)" />
         </figure>
       </div>
       <div id="divider3" class="flex-align-div">
@@ -254,25 +264,35 @@
     <div class="modal-content">
   
       <div class="mySlides">
-        <div class="numbertext">1 / 4</div>
+        <div class="numbertext">1 / 6</div>
         <img src="images/mychauffeur.jpg" style="width:60%" alt="My Chauffeur">
       </div>
   
       <div class="mySlides">
-        <div class="numbertext">2 / 4</div>
+        <div class="numbertext">2 / 6</div>
         <img src="images/mynftours.jpg" style="width:60%" alt="My Newfoundland Tours">
       </div>
   
       <div class="mySlides">
-        <div class="numbertext">3 / 4</div>
+        <div class="numbertext">3 / 6</div>
         <img src="images/joww.jpg" style="width:60%" alt="Johnny O&#39;s Wrestling Website">
       </div>
       
       <div class="mySlides">
-        <div class="numbertext">4 / 4</div>
-        <img src="images/tbi_inventory.jpg" style="width:60%" alt="Topsail Billiard Inventory Tracker">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/tbi_inventory.png" style="width:60%" alt="Topsail Billiard Inventory Tracker">
       </div>
       
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/STCalculator.png" style="max-height: 490px" alt="JavaScript Calculator (Inspired by Star Trek: TNG)">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/CardSharks.png" style="width:60%" alt="Card Sharks App (Using React JS)">
+      </div>
+
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
   
@@ -280,17 +300,25 @@
         <span id="caption"></span>
       </div>
   
-      <div class="column">
-        <img class="demo cursor" src="images/mychauffeur.jpg" style="width:100%" onclick="currentSlide(1)" alt="Designed for my brother&#44; Terry O&#39;Neill&#44; for his chauffeur business in 2017">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/mynftours.jpg" style="width:100%" onclick="currentSlide(2)" alt="A website designed for David Snow, former Owner &amp; Proprietor of Wildland Tours">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/joww.jpg" style="width:100%" onclick="currentSlide(3)" alt="A hobby website I designed to track details and stats about W.W.E. Superstars &amp; Events">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/tbi_inventory.jpg" style="width:100%" onclick="currentSlide(4)" alt="A website I currently use to track inventory at Dooly&#39;s Bar &amp; billiards in St. John's&#44; NL">
+      <div id="thumbnails">
+        <div class="column">
+          <img class="demo cursor" src="images/mychauffeur.jpg" style="width:100%" onclick="currentSlide(1)" alt="Designed for my brother&#44; Terry O&#39;Neill&#44; for his chauffeur business in 2017">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/mynftours.jpg" style="width:100%" onclick="currentSlide(2)" alt="A website designed for David Snow, former Owner &amp; Proprietor of Wildland Tours">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/joww.jpg" style="width:100%" onclick="currentSlide(3)" alt="A hobby website I designed to track details and stats about W.W.E. Superstars &amp; Events">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/tbi_inventory.png" style="width:100%" onclick="currentSlide(4)" alt="A website I currently use to track inventory at Dooly&#39;s Bar &amp; billiards in St. John's&#44; NL">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/STCalculator_wide.png" style="width:100%" onclick="currentSlide(5)" alt="A calculator programmed in Javascript, layout influenced by Star Trek: The Next Generation&copy;">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/CardSharks.png" style="width:100%" onclick="currentSlide(6)" alt="Card Sharks App, a game based on the TV Show, programmed in React JS (&copy; Freemantle Media)">
+        </div>
       </div>
     </div>
   </div>
