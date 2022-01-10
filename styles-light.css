@@ -1,6 +1,12 @@
+/* Colours */
+/* Prussian Blue: #0B3C5D */
+/* Sky Blue:      #328CC1 */
+/* Gold Leaf:     #D9B310 */
+/* Ivory Black:   #1D2731 */
+
 h1, h2, h4, small, .ham-menu, .long-form a, .dropdown-content a,
 .container > .footer > p
- { color: #121212; }
+ { color: #1D2731; }
 
 h5, h6, .code-logo, .code-text, .zoom, .card__face, .card__face--back
  { color: #F5F5F5; }
@@ -9,16 +15,16 @@ h5, h6, .code-logo, .code-text, .zoom, .card__face, .card__face--back
 #divider1, #divider2, #divider3
  { background-color: #F5F5F5; }
 
-.container > .header { border-bottom: 0.5px solid #121212; }
+.container > .header { border-bottom: 0.5px solid #1D2731; }
 
-.container > .footer { border-top: 1px solid #121212; }
+.container > .footer { border-top: 1px solid #1D2731; }
 
 #large-grid > div.mask, #small-grid > div.mask { background-color:#40434e40; }
 
-#large-grid > div.fill, #small-grid > div.fill { background-color:#fac200; }
+#large-grid > div.fill, #small-grid > div.fill { background-color:#D9B310; }
 
-#section1 { background-color: #A71313; }
+#section1 { background-color: #0B3C5D; }
 
-#section2 { background-color: #dea327; }
+#section2 { background-color: #D9B310; }
 
-#section3 { background-color: #2052ad; }
+#section3 { background-color: #328CC1; }

@@ -5,19 +5,26 @@
 
 * {font-size: 16px; box-sizing: border-box; margin: 0;}
 
+/* Colours */
+/* Prussian Blue: #0B3C5D */
+/* Sky Blue:      #328CC1 */
+/* Gold Leaf:     #D9B310 */
+/* Ivory Black:   #1D2731 */
+
 html {
-  background-image: url(images/bg1.jpeg);
+  /* background-image: url(images/bg1.jpeg);
   background-size: 100vw;
-  background-position: center 6vw;
-  background-color: #124559;
-  background-repeat: repeat-y;
+  background-position: center 6vw; */
+  background-color: #0B3C5D;
+  /* background-repeat: repeat-y;
+  overflow: hidden; */
 }
 
-body {margin: 0;}
+body {margin: 0; box-sizing: border-box;}
 
 h1 {font-family: "FinalFrontier";   font-size: 4rem; font-weight: 100;}
 h2 {font-family: "FinalFrontierSS"; font-size: 2rem; font-weight: 100;}
-h3 {font-family: "FinalFrontier";   font-size: 1.5rem; color: #A71313;}
+h3 {font-family: "FinalFrontier";   font-size: 1.5rem; color: #328CC1;}
 h4 {font-family: "FinalFrontier";   font-size: 3.5rem; width: 80%;}
 h5 {font-family: "Roboto";          font-size: 1.5rem; 
     padding: 48px 24px; width: 88%; text-align: justify; text-justify: inter-word; }
@@ -41,7 +48,7 @@ h5 {font-family: "Roboto";          font-size: 1.5rem;
     "main"
     "footer";
   text-align: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -55,7 +62,7 @@ h5 {font-family: "Roboto";          font-size: 1.5rem;
 }
 
 .container > .main {
-  grid-area: main; overflow: auto; display: grid;
+  grid-area: main; overflow: hidden auto; display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, auto);
   grid-template-areas: 
@@ -68,6 +75,7 @@ h5 {font-family: "Roboto";          font-size: 1.5rem;
     "section3"
     "divider4"
     "section4";
+  justify-content: center;
 }
 
 .container > .main::-webkit-scrollbar {display: none;}
@@ -79,17 +87,17 @@ h5 {font-family: "Roboto";          font-size: 1.5rem;
               grid-auto-rows: 18vw; grid-template-columns: 1fr repeat(3, 3fr) 1fr; }
 
 #large-grid > div,
-#small-grid > div { position: relative; background-color:#fac200AA; outline-color:#fac200;
+#small-grid > div { position: relative; background-color:#D9B310AA; outline-color:#D9B310;
                     outline-style: solid; outline-width: 1vw; }
 
 #large-grid > div.tags,
 #small-grid > div.tags { margin: auto 0; display: flex; align-items: center;
-                         justify-content: center; font-weight: bold; color: #121212; height: 100%; }
+                         justify-content: center; font-weight: bold; color: #1D2731; height: 100%; }
 
 .code-text { text-align: justify; text-justify: inter-word; }
 
-#large-grid > div.tags > p {font-size: 2.25vw;}
-#small-grid > div.tags > p {font-size: 4.25vw;}
+#large-grid > div.tags > p {font-size: 2vw;}
+#small-grid > div.tags > p {font-size: 3.75vw;}
 
 #row2-1{ text-align: right; }
 #row2-1 > p { font-family: 'Rozha One', serif; position: relative; font-size: 5vw; margin: 0; }
@@ -107,7 +115,7 @@ h5 {font-family: "Roboto";          font-size: 1.5rem;
             display: flex; flex-flow: row wrap; padding: 24px;
             align-items: center; justify-content: center;} 
 #section1 > div { width: 24vw; min-width: 200px; height: 12vw; min-height: 120px;
-                  margin: 8px; display: flex; align-items: center;
+                  margin: 8px 0 8px 0; display: flex; align-items: center;
                   justify-content: center; }
 
 #section2 { grid-area: section2; background-color: #dea327;
@@ -121,16 +129,16 @@ figure > img { width: 40vw; min-width: 325px; margin: 8px; border-radius: 8px; }
 .links { display: flex; flex-direction: row; height: 20vh;
          justify-content: space-around; align-items: center; }
 
-#section3 { grid-area: section3; background-color: #2052ad; height: 70vh; }
+#section3 { grid-area: section3; background-color: #0B3C5D; height: 70vh; }
 
 .flex-align-sec { height: 70vh; display: flex; align-items: center; justify-content: center; }
     
-#divider1 { grid-area: divider1; margin-top: 0.5vw }
+#divider1 { grid-area: divider1; }
 #divider2 { grid-area: divider2; }
 #divider3 { grid-area: divider3; }
 
 .flex-align-div {height: 20vh; display: flex; align-items: center; justify-content: center;
-                 border-top: 1px solid #121212; border-bottom: 1px solid black;}
+                 border-top: 1px solid #1D2731; border-bottom: 1px solid black;}
   
 .zoom { padding: 0; transition: transform 0.12s; /* Animation */
         width: auto; margin: 0 auto; border-radius: 15px; color: #F5F5F5; }
@@ -151,14 +159,15 @@ button { background-color: #2052ad; padding: 0; border: none; background: none; 
 .card.is-flipped { transform: translateX(-100%) rotateY(-180deg);}
 
 .card__face { position: absolute; width: 100%; height: 100%;
-              text-align: center; backface-visibility: hidden;}
+              text-align: center; backface-visibility: hidden; border-radius: 25px;
+              box-shadow: 5px 5px 10px #1D2731;}
 
 .card__face--front { background: #A71313; font-size: 1rem; justify-content: center; align-items: center;
                      display: grid;}
 
 .card__face--back  { background: #A71313; font-size: 1rem; transform: rotateY(180deg);
                      text-align: justify; text-justify: inter-word;
-                     padding: 4px; justify-content: center; align-items: center; display: grid;}
+                     padding: 8px; justify-content: center; align-items: center; display: grid;}
 /* -------------------------------------------------------------------------------- */
 
 /* --------------------------- Drop Menu in Mobile Mode --------------------------- */
@@ -170,26 +179,26 @@ button { background-color: #2052ad; padding: 0; border: none; background: none; 
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
 
-.dropdown-content a { color: #121212; padding: 12px 16px; text-decoration: none; display: block; }
+.dropdown-content a { color: #1D2731; padding: 12px 16px; text-decoration: none; display: block; }
 
 .dropdown:hover .dropdown-content { display: block; }
 /* -------------------------------------------------------------------------------- */
 
 /* ----------------------------- Return To Top Button ----------------------------- */
 #myBtn { display: none; position: fixed; bottom: 24px; right: 8px; z-index: 100; 
-         background-color: #fac200; color: #121212; font-weight: 400;
-         cursor: pointer; box-shadow: 2px 5px #121212;
+         background-color: #D9B310; color: #1D2731; font-weight: 400;
+         cursor: pointer; box-shadow: 2px 5px #1D2731;
          padding: 8px 16px; border-radius: 8px; font-size: 1.125rem; }
 
-#myBtn:hover  { background-color: #fac200BB; }
-#myBtn:active { background-color: #fac20088; box-shadow: 1px 1px #121212;
+#myBtn:hover  { background-color: #D9B310BB; }
+#myBtn:active { background-color: #D9B31088; box-shadow: 1px 1px #1D2731;
                 transform: translateY(4px); }
 /* -------------------------------------------------------------------------------- */
 
 /* ---------------------------- Dark/Light Mode Button ---------------------------- */
 .mode-button { position: fixed; bottom: 24px; left: 8px; z-index: 100;
                background-color: #2052ad; color: #F5F5F5; font-weight: 400;
-               cursor: pointer; box-shadow: 2px 5px #121212;
+               cursor: pointer; box-shadow: 2px 5px #1D2731;
                padding: 8px 16px; border-radius: 8px; font-size: 1.125rem; }
 .mode-button:hover  { background-color: #2052adBB; }
 .mode-button:active { background-color: #2052ad88; box-shadow: 1px 1px #000;
@@ -206,7 +215,7 @@ button { background-color: #2052ad; padding: 0; border: none; background: none; 
 /* The Modal (background) */
 .modal { display: none; position: fixed; z-index: 120;
   padding-top: 25px; left: 0; top: 0; width: 100%; height: 100%;
-  overflow: auto; background-color: #121212EE;
+  overflow: auto; background-color: #1D2731EE;
 }
 
 /* Modal Content */
@@ -219,7 +228,7 @@ button { background-color: #2052ad; padding: 0; border: none; background: none; 
 
 .close:hover, .close:focus {color: #999; text-decoration: none; cursor: pointer;}
 
-.mySlides {text-align: center; display: none; background-color: #121212;}
+.mySlides {text-align: center; display: none; background-color: #1D2731;}
 
 .cursor {cursor: pointer;}
 
@@ -234,7 +243,7 @@ button { background-color: #2052ad; padding: 0; border: none; background: none; 
 .next { right: 0; border-radius: 3px 0 0 3px;}
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {background-color: #121212cc;}
+.prev:hover, .next:hover {background-color: #1D2731cc;}
 
 /* Number text (1/3 etc) */
 .numbertext { color: #f5f5f5; font-size: 12px;
@@ -243,18 +252,19 @@ button { background-color: #2052ad; padding: 0; border: none; background: none; 
 img { margin-bottom: -4px;}
 
 .caption-container { text-align: center;
-  font-size: 2rem; background-color: #121212;
+  font-size: 2rem; background-color: #1D2731;
   padding: 4px 16px; color: #F5F5F5;}
 
 .demo {opacity: 0.6;}
 
 .active, .demo:hover {opacity: 1;}
 
-img.hover-shadow {transition: 0.3s;}
+img.hover-shadow {transition: 0.3s; box-shadow: 5px 5px 10px #1D2731;}
 
-.hover-shadow:hover {box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030; transform: scale(1.05)}
+.hover-shadow:hover {box-shadow: 0 4px 8px 0 #1D273133, 0 6px 20px 0 #1D273130;
+                     transform: scale(1.05)}
 
-#thumbnails { display: flex; flex-flow: row wrap; background-color: #121212; align-items: center; justify-content: center;}
+#thumbnails { display: flex; flex-flow: row wrap; background-color: #1D2731; align-items: center; justify-content: center;}
 
 /* ---------------------------------------------------------------------------------*/
 
