@@ -1,8 +1,8 @@
 @font-face {font-family: "FinalFrontier";
-            src: local("FinalFrontier"), url(./FinalFrontier.ttf) format('truetype');}
+            src: local("fonts/FinalFrontier"), url(./fonts/FinalFrontier.ttf) format('truetype');}
 @font-face {font-family: "FinalFrontierSS";
-            src: local("FinalFrontierSS"), url(FinalFrontierSS.ttf) format('truetype');}
-
+            src: local("fonts/FinalFrontierSS"), url(./fonts/FinalFrontierSS.ttf) format('truetype');}
+  
 * {font-size: 16px; box-sizing: border-box; margin: 0;}
 
 /* Colours */

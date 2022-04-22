@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Panton-Black-Caps';
+  src:url('fonts/Panton-Black-Caps.ttf.woff') format('woff'),
+      url('fonts/Panton-Black-Caps.ttf.svg#Panton-Black-Caps') format('svg'),
+      url('fonts/Panton-Black-Caps.ttf.eot'),
+      url('fonts/Panton-Black-Caps.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {font-family: "Gravitica";
+  src: local("./fonts/ckhans-fonts-gravitica-light-demo.otf"), 
+  url(fonts/ckhans-fonts-gravitica-light-demo.otf) format('truetype');
+}
+@font-face {font-family: "AvenirBlack";
+  src: local("./fonts/AvenirLTStd-Black.otf"), 
+  url(fonts/AvenirLTStd-Black.otf) format('truetype');
+}
+@font-face {font-family: "AvenirBook";
+  src: local("./fonts/AvenirLTStd-Book.otf"), 
+  url(fonts/AvenirLTStd-Book.otf) format('truetype');
+}
+@font-face {font-family: "AvenirRoman";
+  src: local("./fonts/AvenirLTStd-Roman.otf"), 
+  url(fonts/AvenirLTStd-Roman.otf) format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6 {  margin: 0;}  
+
+h1 { font-size: 48px; font-family: "Panton-Black-Caps"; }
+h2 { font-size: 24px; font-family: "Panton-Black-Caps"; }
+h3 { font-size: 24px; font-family: "AvenirBlack"; color: #008cff; }
+h4 { font-size: 24px; font-family: "AvenirRoman"; }
+h5 { font-size: 18px; font-family: "AvenirBook"; color: #384456; }
+h6 { font-size: 18px; font-family: "AvenirBlack"; color: #008cff; }
+.sub-list { font-size: 24px; font-family: "AvenirRoman"; margin: 0 4px; 
+            border-bottom: 1px solid #121212; }
+.bracket { font-size: 18px;}
+
+i { color: #008cff; margin: 2px; }
+
+ul { padding: 0 0 0 16px; margin: 0; }
+li, a { font-size: 16px; font-family: "AvenirRoman"; color: #384456; text-decoration: none; text-align: justify; text-justify: inter-word;} 
+/* text-align: justify; text-justify: inter-word; */
+
+div {padding: 4px;}
+.grey { color: #3d3d3d; margin: 0 4px 0 0;}
+.locale {margin-left: 24px;}
+
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(1fr 12) ;
+  gap: 32px;
+  grid-template-areas:
+    "name  name  name  name  name  name  name  name  name  name  name  name"
+    "phone phone phone phone email email email email local local local local"
+    "educa educa educa educa educa educa educa stack stack stack stack stack"
+    "work  work  work  work  work  work  work  stack stack stack stack stack"
+    "work  work  work  work  work  work  work  find  find  find  find  find"
+    "work  work  work  work  work  work  work  find  find  find  find  find"
+    "work  work  work  work  work  work  work  find  find  find  find  find"
+    "work  work  work  work  work  work  work  find  find  find  find  find"
+    "work  work  work  work  work  work  work  find  find  find  find  find"
+    "work  work  work  work  work  work  work  find  find  find  find  find"
+    "work  work  work  work  work  work  work  find  find  find  find  find"
+    "work  work  work  work  work  work  work  find  find  find  find  find";
+  width: calc(100vw - 12rem);
+  margin: 5rem auto;
+  max-width: 900px;
+  /* height: 100vh; */
+}
+
+.name  { grid-area: name;  }
+.phone { grid-area: phone;  display: flex; flex-direction: row; align-items: center; }
+.email { grid-area: email;  display: flex; flex-direction: row; align-items: center; }
+.local { grid-area: local;  display: flex; flex-direction: row; align-items: center; }
+.title { grid-area: title;  }
+.educa { grid-area: educa;  }
+.work  { grid-area: work;   }
+.stack { grid-area: stack;  }
+.find  { grid-area: find;   }
+
+.sub-stack, .find-me {display: flex; flex-flow: row wrap; gap: 4px; }
+.sub-stack { justify-content: space-around; }
+
+.list-date-time { display: flex; flex-direction: row; align-items: center; padding: 0; margin: 2px 0; }
+
+hr.solid { border-top: 3px solid #121212; margin: 2px 0 16px 0;}
+hr.dashed { border-top: 1px dashed #3d3d3d; margin: 16px 0;}
